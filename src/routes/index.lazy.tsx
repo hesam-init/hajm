@@ -6,11 +6,9 @@ export const Route = createLazyFileRoute("/")({
 });
 
 function Page() {
-
 	return (
 		<div className="p-2">
 			<Button />
-			<h3>Wassup boy !</h3>
 		</div>
 	);
 }
