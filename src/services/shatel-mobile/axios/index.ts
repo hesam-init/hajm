@@ -1,9 +1,9 @@
 import axiosTauriApiAdapter from "@/lib/axios/adapter";
+import { BaseEndpoints } from "@/services/base-endpoints";
 import axios from "axios";
-import { ShatelMobileEndpoints } from "..";
 
 export const ShatelMobileHttp = axios.create({
-	baseURL: ShatelMobileEndpoints.Base,
+	baseURL: BaseEndpoints.ShatelMobile,
 	timeout: 8000,
 	adapter: axiosTauriApiAdapter,
 });
