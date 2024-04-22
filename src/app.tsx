@@ -1,5 +1,6 @@
 import { RouterProvider, createRouter } from "@tanstack/react-router";
 
+import ReactQueryProvider from "@/providers/react-query";
 import { routeTree } from "./routeTree.gen";
 
 const router = createRouter({ routeTree });
@@ -11,5 +12,9 @@ declare module "@tanstack/react-router" {
 }
 
 export default function App() {
-	return <RouterProvider router={router} />;
+	return (
+		<ReactQueryProvider>
+			<RouterProvider router={router} />
+		</ReactQueryProvider>
+	);
 }
